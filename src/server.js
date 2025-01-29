@@ -35,7 +35,6 @@ app.use('/api/todos', require('./routes/todoRoutes'));
 // Connect to MongoDB
 // MongoDB connection with error handling
 mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
   useUnifiedTopology: true,
 })
 .then(() => {
