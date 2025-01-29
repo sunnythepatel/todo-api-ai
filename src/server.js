@@ -34,9 +34,7 @@ app.use('/api/todos', require('./routes/todoRoutes'));
 
 // Connect to MongoDB
 // MongoDB connection with error handling
-mongoose.connect(process.env.MONGODB_URI, {
-  useUnifiedTopology: true,
-})
+mongoose.connect(process.env.MONGODB_URI)
 .then(() => {
   console.log('Successfully connected to MongoDB.');
 })
